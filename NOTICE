@@ -1,0 +1,6 @@
+Spark Adaptive File Connector
+Copyright 2021 and onwards Hunters.ai.
+
+DynamicPathsFileStreamSource file is based on FieStreamSource from Apache Spark:
+https://github.com/apache/spark/blob/512d337abf1387a81ac47e50656e330eb3f51b22/sql/core/src/main/scala/org/apache/spark/sql/execution/streaming/FileStreamSource.scala
+and it has been modified by Hunters.ai to add support for dynamic paths.
