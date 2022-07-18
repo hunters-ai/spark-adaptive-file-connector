@@ -25,6 +25,8 @@ lazy val root = (project in file("."))
     name := "spark-adaptive-file-connector",
     version := "1.0.0-SNAPSHOT")
 
+ThisBuild / versionScheme := Some("semver-spec")
+
 val sparkVersion = "3.1.2"
 val circeVersion = "0.13.0"
 libraryDependencies ++= Seq(
@@ -67,7 +69,7 @@ ThisBuild / homepage := Some(
 // Remove all additional repository other than Maven Central from POM
 ThisBuild / pomIncludeRepository := { _ => false }
 ThisBuild / publishTo := {
-  val nexus = "https://oss.sonatype.org/"
+  val nexus = "https://s01.oss.sonatype.org/"
   if (isSnapshot.value) Some("snapshots" at nexus + "content/repositories/snapshots")
   else Some("releases" at nexus + "service/local/staging/deploy/maven2")
 }
