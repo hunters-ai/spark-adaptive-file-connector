@@ -52,3 +52,6 @@ It shows how to:
 When you use this library in your app please remember to register 
 the DynamicPathsFileStreamSourceProvider in your DataSourceRegister. You can see example what was needed for tests in 
 `src/test/resources/META-INF/services/org.apache.spark.sql.sources.DataSourceRegister`.
+
+## Video
+[An Advanced S3 Connector for Spark to Hunt for Cyber Attacks (Data&AI Summit, San Francisco 2022)](https://youtu.be/Lxygk0nmq7Q)
