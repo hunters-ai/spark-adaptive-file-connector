@@ -69,6 +69,10 @@ class DynamicPathsFileStreamSourceProvider
           DynamicPathsFileStreamSourceProvider.MAX_NUMBER_OF_DAYS_TO_READ_PARAMETER_NAME,
           DynamicPathsFileStreamSourceProvider.DEFAULT_MAX_NUMBER_OF_DAYS_TO_READ)
         .toInt
+    require(
+      maxNumberOfDaysToRead >= DynamicPathsFileStreamSourceProvider.DEFAULT_MAX_NUMBER_OF_DAYS_TO_READ.toInt,
+      s"maxNumberOfDaysToRead must be at least " +
+        s"${DynamicPathsFileStreamSourceProvider.DEFAULT_MAX_NUMBER_OF_DAYS_TO_READ} for no data loss in midnight.")
     val sourcePathsTimezone =
       ZoneId.of(
         parameters.getOrElse(

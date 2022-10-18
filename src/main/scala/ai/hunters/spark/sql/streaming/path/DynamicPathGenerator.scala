@@ -17,16 +17,11 @@
  * limitations under the License.
  */
 
-
 package ai.hunters.spark.sql.streaming.path
 
 import java.time.{LocalDate, ZoneId}
 
-import DynamicPathGenerator.{
-  DAY_WILDCARD,
-  MONTH_WILDCARD,
-  YEAR_WILDCARD
-}
+import DynamicPathGenerator.{DAY_WILDCARD, MONTH_WILDCARD, YEAR_WILDCARD}
 
 class DynamicPathGenerator(wildcardedGlob: String, maxNumberOfDaysToRead: Int, timeZone: ZoneId)
     extends PathGenerator {
