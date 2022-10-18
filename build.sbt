@@ -23,7 +23,7 @@ lazy val root = (project in file("."))
   .settings(
     organization := "ai.hunters",
     name := "spark-adaptive-file-connector",
-    version := "1.0.0")
+    version := "1.0.1")
 
 ThisBuild / versionScheme := Some("semver-spec")
 
